@@ -34,12 +34,12 @@
             </div>
             <div class="project-card" onclick="openModal('activity2')">
                 <img src="NCP.jpg" alt="Activity 2">
-                <h3>Activity Title 2</h3>
-                <p>Brief description of the activity.</p>
+                <h3>Band</h3>
+                <p>badum tss</p>
             </div>
             <div class="project-card" onclick="openModal('activity3')">
                 <img src="NCP.jpg" alt="Activity 3">
-                <h3>Activity Title 3</h3>
+                <h3>PBB</h3>
                 <p>Brief description of the activity.</p>
             </div>
             <div class="project-card" onclick="openModal('activity4')">
@@ -96,36 +96,48 @@
     <script>
         // JavaScript for opening and closing modal
         function openModal(activity) {
-            document.getElementById('modal').style.display = 'flex'; // Change to 'flex' for centering
-            if (activity === 'activity1') {
-                document.getElementById('modal-title').innerText = 'Activity 1 Brief Info';
-                document.getElementById('modal-info').innerText = 'Brief info about Activity 1 goes here.';
-            } else if (activity === 'activity2') {
-                document.getElementById('modal-title').innerText = 'Activity 2 Brief Info';
-                document.getElementById('modal-info').innerText = 'Brief info about Activity 2 goes here.';
-            } else if (activity === 'activity3') {
-                document.getElementById('modal-title').innerText = 'Activity 3 Brief Info';
-                document.getElementById('modal-info').innerText = 'Brief info about Activity 3 goes here.';
-            } else if (activity === 'activity4') {
-                document.getElementById('modal-title').innerText = 'Activity 4 Brief Info';
-                document.getElementById('modal-info').innerText = 'Brief info about Activity 4 goes here.';
-            } else if (activity === 'activity5') {
-                document.getElementById('modal-title').innerText = 'Activity 5 Brief Info';
-                document.getElementById('modal-info').innerText = 'Brief info about Activity 5 goes here.';
-            } else if (activity === 'activity6') {
-                document.getElementById('modal-title').innerText = 'Activity 6 Brief Info';
-                document.getElementById('modal-info').innerText = 'Brief info about Activity 6 goes here.';
-            } else if (activity === 'activity7') {
-                document.getElementById('modal-title').innerText = 'Activity 7 Brief Info';
-                document.getElementById('modal-info').innerText = 'Brief info about Activity 7 goes here.';
-            } else if (activity === 'activity8') {
-                document.getElementById('modal-title').innerText = 'Activity 8 Brief Info';
-                document.getElementById('modal-info').innerText = 'Brief info about Activity 8 goes here.';
-            } else if (activity === 'activity9') {
-                document.getElementById('modal-title').innerText = 'Activity 9 Brief Info';
-                document.getElementById('modal-info').innerText = 'Brief info about Activity 9 goes here.';
-            }
-        }
+    document.getElementById('modal').style.display = 'flex'; // Change to 'flex' for centering
+
+    if (activity === 'activity1') {
+        document.getElementById('modal-title').innerText = 'Activity 1 Brief Info';
+        document.getElementById('modal-info').innerText = 'Brief info about Activity 1 goes here.';
+        document.querySelector('.modal-section:nth-child(3) p').innerText = 'Prestige of Activity 1: Achieved 1st place in XYZ competition.';
+    } else if (activity === 'activity2') {
+        document.getElementById('modal-title').innerText = 'Tentang';
+        document.getElementById('modal-info').innerText = 'Bass Gitar';
+        document.querySelector('.modal-section:nth-child(3) p').innerText = 'Prestige of Activity 2: Performed at ABC music festival.';
+    } else if (activity === 'activity3') {
+        document.getElementById('modal-title').innerText = 'Activity 3 Brief Info';
+        document.getElementById('modal-info').innerText = 'Brief info about Activity 3 goes here.';
+        document.querySelector('.modal-section:nth-child(3) p').innerText = 'Prestige of Activity 3: Led the school in National Parade.';
+    } else if (activity === 'activity4') {
+        document.getElementById('modal-title').innerText = 'Activity 4 Brief Info';
+        document.getElementById('modal-info').innerText = 'Brief info about Activity 4 goes here.';
+        document.querySelector('.modal-section:nth-child(3) p').innerText = 'Prestige of Activity 4: Organized the annual cultural fest.';
+    } else if (activity === 'activity5') {
+        document.getElementById('modal-title').innerText = 'Activity 5 Brief Info';
+        document.getElementById('modal-info').innerText = 'Brief info about Activity 5 goes here.';
+        document.querySelector('.modal-section:nth-child(3) p').innerText = 'Prestige of Activity 5: Won the interschool debate competition.';
+    } else if (activity === 'activity6') {
+        document.getElementById('modal-title').innerText = 'Activity 6 Brief Info';
+        document.getElementById('modal-info').innerText = 'Brief info about Activity 6 goes here.';
+        document.querySelector('.modal-section:nth-child(3) p').innerText = 'Prestige of Activity 6: National-level achievements in sports.';
+    } else if (activity === 'activity7') {
+        document.getElementById('modal-title').innerText = 'Activity 7 Brief Info';
+        document.getElementById('modal-info').innerText = 'Brief info about Activity 7 goes here.';
+        document.querySelector('.modal-section:nth-child(3) p').innerText = 'Prestige of Activity 7: Contributed to community service initiatives.';
+    } else if (activity === 'activity8') {
+        document.getElementById('modal-title').innerText = 'Activity 8 Brief Info';
+        document.getElementById('modal-info').innerText = 'Brief info about Activity 8 goes here.';
+        document.querySelector('.modal-section:nth-child(3) p').innerText = 'Prestige of Activity 8: Developed innovative projects in science fair.';
+    } else if (activity === 'activity9') {
+        document.getElementById('modal-title').innerText = 'Activity 9 Brief Info';
+        document.getElementById('modal-info').innerText = 'Brief info about Activity 9 goes here.';
+        document.querySelector('.modal-section:nth-child(3) p').innerText = 'Prestige of Activity 9: Champion in regional chess tournament.';
+    }
+}
+
+        
 
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
