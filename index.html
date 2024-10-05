@@ -28,43 +28,43 @@
         <h2>Our Activities</h2>
         <div class="projects-container">
             <div class="project-card" onclick="openModal('activity1')">
-                <img src="NCP.jpg" alt="Activity 1">
-                <h3>Pramuka</h3>
+                <img src="Srohis.jpg" alt="Activity 1">
+                <h3>Rohis</h3>
                 <p>Brief description of the activity.</p>
             </div>
             <div class="project-card" onclick="openModal('activity2')">
-                <img src="NCP.jpg" alt="Activity 2">
+                <img src="Sband.jpeg" alt="Activity 2">
                 <h3>Band</h3>
                 <p>badum tss</p>
             </div>
             <div class="project-card" onclick="openModal('activity3')">
-                <img src="NCP.jpg" alt="Activity 3">
+                <img src="Spbb.jpg" alt="Activity 3">
                 <h3>PBB</h3>
                 <p>Brief description of the activity.</p>
             </div>
             <div class="project-card" onclick="openModal('activity4')">
-                <img src="NCP.jpg" alt="Activity 4">
-                <h3>Activity Title 4</h3>
+                <img src="Spmr.jpg" alt="Activity 4">
+                <h3>PMR</h3>
                 <p>Brief description of the activity.</p>
             </div>
             <div class="project-card" onclick="openModal('activity5')">
-                <img src="NCP.jpg" alt="Activity 5">
-                <h3>Activity Title 5</h3>
+                <img src="Smakrejpg.jpg" alt="Activity 5">
+                <h3>Jurnalistik</h3>
                 <p>Brief description of the activity.</p>
             </div>
             <div class="project-card" onclick="openModal('activity6')">
-                <img src="NCP.jpg" alt="Activity 6">
-                <h3>Activity Title 6</h3>
+                <img src="Sbasketjpg.jpg" alt="Activity 6">
+                <h3>Basket</h3>
                 <p>Brief description of the activity.</p>
             </div>
             <div class="project-card" onclick="openModal('activity7')">
-                <img src="NCP.jpg" alt="Activity 7">
-                <h3>Activity Title 7</h3>
+                <img src="voicejpg.jpg" alt="Activity 7">
+                <h3>Voice</h3>
                 <p>Brief description of the activity.</p>
             </div>
             <div class="project-card" onclick="openModal('activity8')">
-                <img src="NCP.jpg" alt="Activity 8">
-                <h3>Activity Title 8</h3>
+                <img src="kirjpg.jpg" alt="Activity 8">
+                <h3>KIR</h3>
                 <p>Brief description of the activity.</p>
             </div>
             <div class="project-card" onclick="openModal('activity9')">
@@ -92,6 +92,43 @@
             </div>
         </div>
     </div>
+    
+    <title>Registrasi</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link ke file CSS -->
+</head>
+<body>
+    <h1>Selamat Datang!</h1>
+    <button id="registration-button">Registrasi</button>
+
+    <!-- Modal untuk halaman registrasi -->
+    <div id="registrationModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Halaman Registrasi</h2>
+            <form id="registrationForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" required><br>
+                
+                <label for="class">Kelas:</label>
+                <input type="text" id="class" required><br>
+                
+                <label for="major">Jurusan:</label>
+                <input type="text" id="major" required><br>
+                
+                <label for="instrument">Alat Musik:</label>
+                <input type="text" id="instrument" required><br>
+                
+                <label for="experience">Pengalaman:</label>
+                <textarea id="experience" required></textarea><br>
+                
+                <button type="submit">Daftar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link ke file JavaScript -->
+</body>
+</html>
 
     <script>
         // JavaScript for opening and closing modal
