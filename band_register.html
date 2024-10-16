@@ -25,17 +25,14 @@
             <label for="major">Jurusan:</label>
             <input type="text" id="major" required><br>
             
-            
+            <label for="instrument">Choose Instrument</label>
             <br>
-
-            <label for="extracurricular">Choose Extracurricular Activity</label>
-            <br>
-            <select name="extracurricular" id="extracurricular">
-                <option value="basketball">Basketball</option>
-                <option value="soccer">Soccer</option>
-                <option value="art_club">Art Club</option>
-                <option value="music_band">Music Band</option>
-                <option value="chess_club">Chess Club</option>
+            <select name="instrument" id="instrument">
+                <option value="guitar">Guitar</option>
+                <option value="piano">Piano</option>
+                <option value="drums">Drums</option>
+                <option value="violin">Violin</option>
+                <option value="flute">Flute</option>
             </select>
             <br>
             
@@ -48,16 +45,5 @@
 </div>
 
 <script src="script.js"></script> <!-- Link ke file JavaScript -->
-<script>
-    document.getElementById('registrationForm').addEventListener('extracurricular', function(event) {
-        const selectedActivity = document.getElementById('extracurricular').value;
-        
-        if (selectedActivity === 'music_band') {
-            event.preventDefault();
-            window.location.href = 'band_register.html'; // Redirect to band-specific page
-        }
-    });
-</script>
-
 </body>
 </html>

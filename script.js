@@ -25,3 +25,4 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     alert('Registrasi berhasil!'); // Logika registrasi dapat ditambahkan di sini
     modal.style.display = 'none'; // Tutup modal setelah registrasi
 });
+
