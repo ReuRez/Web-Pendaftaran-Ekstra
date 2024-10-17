@@ -55,23 +55,22 @@ $jurusan = $_POST['jurusan'];
 $alat_musik = $_POST['alat_musik'];
 $pengalaman = $_POST['pengalaman'];
 
-// SQL query to insert form data into the tb_band table
-$sql = mysqli_query($koneksi, "INSERT INTO tb_band(id_user, nama, kelas, jurusan, alat_musik, pengalaman)
-        VALUES ('0','$nama', '$kelas', '$jurusan', '$alat_musik', '$pengalaman')");
+$sql = "INSERT INTO tb_band(id_user, nama, kelas, jurusan, alat_musik, pengalaman)
+        VALUES ('0','$nama', '$kelas', '$jurusan', '$alat_musik', '$pengalaman')";
 
 // Execute the query
 if (mysqli_query($koneksi, $sql)) {
     echo "<script>
             alert('Registration Confirmed');
-           
           </script>";
-          echo '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9-ANyuBQ7a24eFBeBGjuynW5OyHmBKkvPkYU61tymXjk7zQ/viewform?embedded=true" width="640" height="3379" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>';
+    echo '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9-ANyuBQ7a24eFBeBGjuynW5OyHmBKkvPkYU61tymXjk7zQ/viewform?embedded=true" width="640" height="3379" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>';
 } else {
     echo "Error: " . mysqli_error($koneksi);
 }
+
 }
 ?>
 
-<script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>
