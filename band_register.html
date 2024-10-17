@@ -15,32 +15,31 @@
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Halaman Registrasi</h2>
-        <form id="registrationForm">
+        <form id="registrationForm" action="proses_registerband.php" method="POST">
             <label for="name">Nama:</label>
-            <input type="text" id="name" required><br>
-            
+            <input type="text" id="name" name="name" required><br>
+        
             <label for="class">Kelas:</label>
-            <input type="text" id="class" required><br>
-            
+            <input type="text" id="class" name="class" required><br>
+        
             <label for="major">Jurusan:</label>
-            <input type="text" id="major" required><br>
-            
-            <label for="instrument">Choose Instrument</label>
-            <br>
+            <input type="text" id="major" name="major" required><br>
+        
+            <label for="instrument">Choose Instrument</label><br>
             <select name="instrument" id="instrument">
                 <option value="guitar">Guitar</option>
                 <option value="piano">Piano</option>
                 <option value="drums">Drums</option>
                 <option value="violin">Violin</option>
                 <option value="flute">Flute</option>
-            </select>
-            <br>
-            
+            </select><br>
+        
             <label for="experience">Pengalaman:</label>
-            <textarea id="experience" required></textarea><br>
-            
+            <textarea id="experience" name="experience" required></textarea><br>
+        
             <button type="submit">Daftar</button>
         </form>
+        
     </div>
 </div>
 
