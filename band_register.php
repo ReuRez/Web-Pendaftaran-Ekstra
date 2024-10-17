@@ -63,7 +63,7 @@ if (mysqli_query($koneksi, $sql)) {
     echo "<script>
             alert('Registration Confirmed');
           </script>";
-    echo '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9-ANyuBQ7a24eFBeBGjuynW5OyHmBKkvPkYU61tymXjk7zQ/viewform?embedded=true" width="640" height="3379" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>';
+    echo '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9-ANyuBQ7a24eFBeBGjuynW5OyHmBKkvPkYU61tymXjk7zQ/viewform?embedded=true" width="640" height="3379" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>=';
 } else {
     echo "Error: " . mysqli_error($koneksi);
 }
