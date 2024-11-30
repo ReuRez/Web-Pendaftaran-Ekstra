@@ -59,20 +59,16 @@
                     const card = document.createElement('div');
                     card.className = 'project-card';
                     card.innerHTML = `
-                        <img src="${activity.image}" alt="${activity.name}">
-                        <h3>${activity.name}</h3>
-                        <p>${activity.description}</p>
+                        <a href="activity.html?id=${activity.id}"> <!-- Link to activity page with ID -->
+                            <img src="${activity.image}" alt="${activity.name}">
+                            <h3>${activity.name}</h3>
+                            <p>${activity.description}</p>
+                        </a>
                     `;
                     container.appendChild(card);
                 });
             })
             .catch(error => console.error('Error fetching activities:', error));
-
-        // Function to close the modal (if you have a modal implementation)
-        function closeModal() {
-            const modal = document.getElementById('modal');
-            modal.style.display = 'none';
-        }
     </script>
 
 </body>
