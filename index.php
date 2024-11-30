@@ -41,7 +41,7 @@
                     const card = document.createElement('div');
                     card.className = 'project-card';
                     card.innerHTML = `
-                        <a href="activity.html?id=${activity.id}"> <!-- Link to activity page with ID -->
+                        <a href="activity.php?id=${activity.id}"> <!-- Link to activity page with ID -->
                             <img src="${activity.image}" alt="${activity.name}">
                             <h3>${activity.name}</h3>
                             <p>${activity.description}</p>

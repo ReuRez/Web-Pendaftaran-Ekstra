@@ -12,7 +12,7 @@
         <h1 id="activity-name">Activity Name</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
             </ul>
         </nav>
     </header>
@@ -54,33 +54,37 @@
     </main>
 
     <script>
-       // Function to get the activity ID from the URL
-function getActivityId() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('id');
-}
+    // Function to get the activity ID from the URL
+    function getActivityId() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('id');
+    }
 
-// Function to fetch activity details
-function fetchActivityDetails() {
-    const activityId = getActivityId();
-    fetch(`fetch_activity.php?id=${activityId}`) // Ensure this PHP script fetches data based on ID
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(activity => {
-            if (activity && Object.keys(activity).length > 0) {
-                document.getElementById('activity-name').innerText = activity.name || 'Unknown Activity';
-                document.getElementById('activity-teacher').innerText = activity.teacher || 'Unknown Teacher';
-                document.getElementById('activity-schedule').innerText = activity.schedule || 'No Schedule Available';
-            } else {
-                console.error('No activity found for the given ID.');
-            }
-        })
-        .catch(error => console.error('Error fetching activity details:', error));
-}
+    // Function to fetch activity details
+    function fetchActivityDetails() {
+        const activityId = getActivityId();
+        fetch(`fetch_single_activity.php?id=${activityId}`) // Use the new PHP script
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(activity => {
+                if (activity && Object.keys(activity).length > 0) {
+                    document.getElementById('activity-name').innerText = activity.name || 'Unknown Activity';
+                    document.getElementById('activity-teacher').innerText = activity.teacher || 'Unknown Teacher';
+                    document.getElementById('activity-schedule').innerText = activity.schedule || 'No Schedule Available';
+                } else {
+                    console.error('No activity found for the given ID.');
+                }
+            })
+            .catch(error => console.error('Error fetching activity details:', error));
+    }
+
+    // Call function to fetch activity details when the document is ready
+    document.addEventListener('DOMContentLoaded', fetchActivityDetails);
+</script>
 
         // Function to load CSV data for participants
         function loadCSV() {
@@ -104,8 +108,8 @@ function fetchActivityDetails() {
             });
         }
 
-        // Load the activity details and participant data when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
+        // Call functions to fetch activity details and load CSV data
+        document.addEventListener('DOMContentLoaded', () => {
             fetchActivityDetails();
             loadCSV();
         });
