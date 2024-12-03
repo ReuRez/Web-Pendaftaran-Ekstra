@@ -87,7 +87,7 @@
 </script>
 
         // Function to load CSV data for participants
-        function loadCSV() {
+       /* function loadCSV() {
             Papa.parse('data.csv', {
                 download: true,
                 header: true,
@@ -112,7 +112,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             fetchActivityDetails();
             loadCSV();
-        });
+        }); */
     </script>
 </body>
 </html>
