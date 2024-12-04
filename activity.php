@@ -32,25 +32,6 @@
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9-ANyuBQ7a24eFBeBGjuynW5OyHmBKkvPkYU61tymXjk7zQ/viewform" class="registration-button">Daftar</a>
             </section>
         </section>
-
-        <aside class="sidebar" style="flex: 30%; padding: 20px;">
-            <h2>Peserta</h2>
-            <table id="data-table">
-                <thead>
-                    <tr>
-                        <th>Nama</th>
-                        <th>Kelas</th>
-                        <th>Alat Musik</th>
-                        <th>Nilai</th>
-                        <th>Link Video</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Rows will be added here by JavaScript -->
-                </tbody>
-            </table>
-            <hr class="divider">
-        </aside>
     </main>
 
     <script>
@@ -86,33 +67,6 @@
     document.addEventListener('DOMContentLoaded', fetchActivityDetails);
 </script>
 
-        // Function to load CSV data for participants
-       /* function loadCSV() {
-            Papa.parse('data.csv', {
-                download: true,
-                header: true,
-                complete: function(results) {
-                    const tableBody = document.querySelector('#data-table tbody');
-                    results.data.forEach(row => {
-                        const tr = document.createElement('tr');
-                        tr.innerHTML = `
-                            <td>${row['Participant Name'] || 'N/A'}</td>
-                            <td>${row['Class'] || 'N/A'}</td>
-                            <td>${row['Instrument'] || 'N/A'}</td>
-                            <td>${row['Score'] || 'N/A'}</td>
-                            <td><a href="${row['Video Link'] || '#'}">Link</a></td>
-                        `;
-                        tableBody.appendChild(tr);
-                    });
-                }
-            });
-        }
-
-        // Call functions to fetch activity details and load CSV data
-        document.addEventListener('DOMContentLoaded', () => {
-            fetchActivityDetails();
-            loadCSV();
-        }); */
     </script>
 </body>
 </html>
