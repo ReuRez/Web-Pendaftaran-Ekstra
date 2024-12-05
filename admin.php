@@ -189,11 +189,8 @@
             }
         }
     </script>
-</ html
 </body>
-</html> ### Updated Code with Separate Modals for Add and Edit Activities
-
-```html
+</html> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
