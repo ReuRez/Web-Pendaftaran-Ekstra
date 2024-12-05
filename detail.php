@@ -43,7 +43,7 @@
                 <h1 id="activity-name">Activity Name</h1>
                 <nav>
                     <ul>
-                        <li><a href="list.php">Home</a></li>
+                        <!-- Removed the Home link -->
                     </ul>
                 </nav>
             </header>
@@ -57,12 +57,9 @@
             </section>
 
             <section class="registration">
-                <h2>Gabung!</h2>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9-ANyuBQ7a24eFBeBGjuynW5OyHmBKkvPk YU61tymXjk7zQ/viewform" class="registration-button">Daftar</a>
+                
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9-ANyuBQ7a24eFBeBGjuynW5OyHmBKkvPkYU61tymXjk7zQ/viewform" class="registration-button">Daftar</a>
             </section>
-        </div>
-        <div class="right-box">
-            <!-- You can add additional content for the right box here -->
         </div>
     </div>
 </body>

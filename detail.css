@@ -10,28 +10,19 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 80%;
     height: 80%;
 }
 
-.left-box, .right-box {
+.left-box {
     border-radius: 20px;
     color: white; /* Set text color to white */
-}
-
-.left-box {
-    width: 60%;
+    width: 100%;
     height: 100%;
     background-color: #000080; /* Navy background */
     padding: 20px; /* Add some padding for better spacing */
-}
-
-.right-box {
-    width: 30%;
-    height: 100%;
-    background-color: #b19cd9; /* Light purple background */
 }
 
 .background-image {
@@ -41,4 +32,45 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.registration-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.left-box {
+    border-radius: 20px;
+    color: white; /* Set text color to white */
+    width: 100%;
+    height: 100%;
+    background-color: #000080; /* Navy background */
+    padding: 20px; /* Add some padding for better spacing */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: space-between; /* Space out children */
 }

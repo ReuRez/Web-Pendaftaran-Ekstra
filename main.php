@@ -41,6 +41,10 @@
         .learn-more i {
             margin-left: 5px;
         }
+        .learn-more a {
+            color: white; /* Ensure the link text is white */
+            text-decoration: none; /* Remove underline from link */
+        }
   </style>
  </head>
  <body>
@@ -57,9 +61,8 @@
    </div>
   </div>
   <div class="learn-more">
-    LEARN MORE
-    <i class="fas fa-arrow-right">
-    </i>
+    <a href="list.php">LEARN MORE</a>
+    <i class="fas fa-arrow-right"></i>
    </div>
  </body>
 </html>
