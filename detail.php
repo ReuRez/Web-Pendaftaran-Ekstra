@@ -43,12 +43,11 @@
         <div class="left-box">
             <header>
                 <h1 id="activity-name">Activity Name</h1>
-                <nav>
-                    <ul>
-                        <!-- Removed the Home link -->
-                    </ul>
-                </nav>
             </header>
+            <section class="home">
+                <a href="main.php" class="home-button">Home</a>
+            </section>
+            
             <section class="image">
                 <img id="activity-image" alt="Activity Image" width="300" /> <!-- Image element to display the activity image -->
             </section>
@@ -64,9 +63,7 @@
             <section class="registration">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhet8J6gSjWuJjGX4bY7jUXfzvebarrosgfs_JJYPIZP1SlQ/viewform?embedded=true" class="registration-button">Daftar</a>
             </section>
-            <section class="home">
-                <a href="main.php" class="home-button">Home</a>
-            </section>
+           
         </div>
     </div>
 </body>
