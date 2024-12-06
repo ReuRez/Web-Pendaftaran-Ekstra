@@ -98,4 +98,16 @@ section h2 {
 
 #activity-name {
     display: none;
+}.home-button, .prestasi-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 0; /* Pastikan tidak ada margin atas */
+}
+
+.home-button:hover, .prestasi-button:hover {
+    background-color: #f0f0f0; /* Gaya hover untuk tombol */
 }
