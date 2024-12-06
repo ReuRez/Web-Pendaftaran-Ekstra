@@ -5,12 +5,13 @@ body {
     background-color: #f4f4f4; /* Light background for contrast */
     color: #333; /* Dark text for readability */
 }
-
 header {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between items */
+    padding: 20px; /* Add padding */
     background-color: #0A0A2A; /* Dark header */
-    color: white;
-    padding: 20px;
-    text-align: center;
+    color: white; /* White text */
 }
 
 h1 {
@@ -134,15 +135,36 @@ input[type="text"], textarea {
 }
 
 button[type="submit"] {
-    background-color: #007bff; /* Blue for submit */
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for better spacing */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+.home-button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for better spacing */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.home-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }

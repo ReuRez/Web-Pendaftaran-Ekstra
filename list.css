@@ -27,7 +27,7 @@ h1 {
 }
 
 .project-card {
-    background-color: #ffffff; /* White background for cards */
+    background-color: #beb0fa; /* White background for cards */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
     overflow: hidden;

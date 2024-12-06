@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1>Admin - Manage Activities</h1>
+        <a href="main.php" class="home-button">Home</a>
         <button onclick="openAddModal()">Add Activity</button>
     </header>
 
