@@ -106,21 +106,36 @@
 
         function openAddModal() {
             document.getElementById('add-modal').style.display = 'block';
-            document.getElementById('add-activity-form').reset();
+ document.getElementById('add-activity-form').reset();
         }
 
         function closeAddModal() {
             document.getElementById('add-modal').style.display = 'none';
         }
 
-        function openEditModal(activity) {
+        document.getElementById('add-activity-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('add-activity-name').value;
+            const description = document.getElementById('add-activity-description').value;
+            const image = document.getElementById('add-activity-image').value;
+            const teacher = document.getElementById('add-activity-teacher').value;
+            const schedule = document.getElementById('add-activity-schedule').value;
+
+            // Add new activity
+            fetch('add_activity.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, description, image, teacher, schedule })
+            }).then(() => {
+                closeAddModal();
+                fetchActivities();
+            });
+        });
+
+        function openEditModal() {
             document.getElementById('edit-modal').style.display = 'block';
-            document.getElementById('edit-activity-id').value = activity.id;
-            document.getElementById('edit-activity-name').value = activity.name;
-            document.getElementById('edit-activity-description').value = activity.description;
-            document.getElementById('edit-activity-image').value = activity.image;
-            document.getElementById('edit-activity-teacher').value = activity.teacher;
-            document.getElementById('edit-activity-schedule').value = activity.schedule;
         }
 
         function closeEditModal() {
@@ -128,61 +143,52 @@
         }
 
         function editActivity(id) {
-            fetch(`fetch_activity.php?id=${id}`)
+            fetch(`get_activity.php?id=${id}`)
                 .then(response => response.json())
-                .then(activity => openEditModal(activity))
+                .then(activity => {
+                    document.getElementById('edit-activity-id').value = activity.id;
+                    document.getElementById('edit-activity-name').value = activity.name;
+                    document.getElementById('edit-activity-description').value = activity.description;
+                    document.getElementById('edit-activity-image').value = activity.image;
+                    document.getElementById('edit-activity-teacher').value = activity.teacher;
+                    document.getElementById('edit-activity-schedule').value = activity.schedule;
+                    openEditModal();
+                })
                 .catch(error => console.error('Error fetching activity:', error));
         }
 
-        function deleteActivity(id) {
-            if (confirm('Are you sure you want to delete this activity?')) {
-                fetch(`delete_activity.php?id=${id}`, { method: 'DELETE' })
-                    .then(response => {
-                        if (response.ok) {
-                            fetchActivities();
-                        } else {
-                            throw new Error('Error deleting activity');
-                        }
-                    })
-                    .catch(error => console.error('Error deleting activity:', error));
-            }
-        }
-
-        document.getElementById('add-activity-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            fetch('add_activity.php', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => {
-                    if (response.ok) {
-                        closeAddModal();
-                        fetchActivities();
-                    } else {
-                        throw new Error('Error adding activity');
-                    }
-                })
-                .catch(error => console.error('Error adding activity:', error));
-        });
-
         document.getElementById('edit-activity-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            const formData = new FormData(event.target);
-            fetch('edit_activity.php', {
+            const id = document.getElementById('edit-activity-id').value;
+            const name = document.getElementById('edit-activity-name').value;
+            const description = document.getElementById('edit-activity-description').value;
+            const image = document.getElementById('edit-activity-image').value;
+            const teacher = document.getElementById('edit-activity-teacher').value;
+            const schedule = document.getElementById('edit-activity-schedule').value;
+
+            // Update activity
+            fetch('update_activity.php', {
                 method: 'POST',
-                body: formData
-            })
-                .then(response => {
-                    if (response.ok) {
-                        closeEditModal();
-                        fetchActivities();
-                    } else {
-                        throw new Error('Error editing activity');
-                    }
-                })
-                .catch(error => console.error('Error editing activity:', error));
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id, name, description, image, teacher, schedule })
+            }).then(() => {
+                closeEditModal();
+                fetchActivities();
+            });
         });
+
+        function deleteActivity(id) {
+            if (confirm('Are you sure you want to delete this activity?')) {
+                fetch(`delete_activity.php?id=${id}`, {
+                    method: 'DELETE'
+                }).then(() => {
+                    fetchActivities();
+                }).catch(error => console.error('Error deleting activity:', error));
+            }
+        }
     </script>
+
 </body>
 </html>
