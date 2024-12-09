@@ -55,26 +55,28 @@
     </div>
 
     <!-- Modal for Editing Activity -->
-    <div id="edit-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeEditModal()">&times;</span>
-            <h2>Edit Activity</h2>
-            <form id="edit-activity-form">
-                <input type="hidden" id="edit-activity-id">
-                <label for="edit-activity-name">Name:</label>
-                <input type="text" id="edit-activity-name" required>
-                <label for="edit-activity-description">Description:</label>
-                <textarea id="edit-activity-description" required></textarea>
-                <label for="edit-activity-image">Image URL:</label>
-                <input type="text" id="edit-activity-image" required>
-                <label for="edit-activity-teacher">Teacher:</label>
-                <input type="text" id="edit-activity-teacher" required>
-                <label for="edit-activity-schedule">Schedule:</label>
-                <textarea id="edit-activity-schedule" required></textarea>
-                <button type="submit">Update</button>
-            </form>
-        </div>
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeEditModal()">&times;</span>
+        <h2>Edit Activity</h2>
+        <form id="edit-activity-form">
+            <input type="hidden" id="edit-activity-id">
+            <label for="edit-activity-name">Name:</label>
+            <input type="text" id="edit-activity-name" required>
+            <label for="edit-activity-description">Description:</label>
+            <textarea id="edit-activity-description" required></textarea>
+            <label for="edit-activity-image">Image URL:</label>
+            <input type="text" id="edit-activity-image" required>
+            <label for="edit-activity-teacher">Teacher:</label>
+            <input type="text" id="edit-activity-teacher" required>
+            <label for="edit-activity-schedule">Schedule:</label>
+            <textarea id="edit-activity-schedule" required></textarea>
+            <label for="edit-activity-link">Link:</label>
+            <input type="text" id="edit-activity-link" required>
+            <button type="submit">Update</button>
+        </form>
     </div>
+</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', fetchActivities);
@@ -153,6 +155,7 @@
                     document.getElementById('edit-activity-image').value = activity.image;
                     document.getElementById('edit-activity-teacher').value = activity.teacher;
                     document.getElementById('edit-activity-schedule').value = activity.schedule;
+                    
                     openEditModal();
                 })
                 .catch(error => console.error('Error fetching activity:', error));

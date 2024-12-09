@@ -26,6 +26,7 @@
                         document.getElementById('activity-schedule').innerText = activity.schedule || 'No Schedule Available';
                         // Display the image
                         document.getElementById('activity-image').src = activity.image || 'default-image.jpg'; // Use a default image if none is found
+                        document.getElementById('daftar-button').href = activity.link || '#'; // Set the link for Daftar button
                     } else {
                         console.error('No activity found for the given ID.');
                     }
@@ -45,10 +46,10 @@
                 <h1 id="activity-name">Activity Name</h1>
             </header>
             <section class="navigation" style="display: flex; justify-content: space-between; align-items: center; margin: 0;">
-    <a href="main.php" class="home-button">Home</a>
-    <div style="flex-grow: 1;"></div> <!-- Ruang kosong di tengah -->
-    <a href="prestasi.php" class="prestasi-button">Prestasi</a>
-</section>
+                <a href="main.php" class="home-button">Home</a>
+                <div style="flex-grow: 1;"></div> <!-- Ruang kosong di tengah -->
+                <a href="prestasi.php" class="prestasi-button">Prestasi</a>
+            </section>
             <section class="image">
                 <img id="activity-image" alt="Activity Image" width="300" /> <!-- Image element to display the activity image -->
             </section>
@@ -62,11 +63,8 @@
             </section>
 
             <section class="registration">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdhet8J6gSjWuJjGX4bY7jUXfzvebarrosgfs_JJYPIZP1SlQ/viewform?embedded=true" class="registration-button">Daftar</a>
+                <a id="daftar-button" href="#" class="registration-button">Daftar</a> <!-- Updated Daftar button -->
             </section>
-
-            
-           
         </div>
     </div>
 </body>

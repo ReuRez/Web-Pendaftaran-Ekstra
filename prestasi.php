@@ -49,7 +49,7 @@
                 <a href="list.php" class="prestasi-button">Kembali</a>
             </section>
             <section class="image">
-                <img id="achievement-image" alt="Achievement Image" width="300" /> <!-- Image element to display the achievement image -->
+            <img id="achievement-image" alt="Achievement Image" width="300" src="img/piala.jpg" /> <!-- Image element to display the achievement image -->
             </section>
 
             <section class="intro">

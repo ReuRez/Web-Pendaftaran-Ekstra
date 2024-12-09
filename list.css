@@ -33,6 +33,7 @@ h1 {
     overflow: hidden;
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    border: 2px solid #ccc; /* Thin border (light gray) */
 }
 
 .project-card:hover {

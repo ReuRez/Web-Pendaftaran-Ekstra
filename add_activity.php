@@ -21,6 +21,7 @@ $image = $data['image'];
 $teacher = $data['teacher'];
 $schedule = $data['schedule'];
 
+
 // Insert the new activity
 $sql = "INSERT INTO aktivitas (name, description, image, teacher, schedule) VALUES (?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);

@@ -71,7 +71,7 @@
 
         document.getElementById('tektias').addEventListener('click', function() {
             clickCount++; // Increment click count
-            if (clickCount === 3) {
+            if (clickCount === 5) {
                 window.location.href = 'admin.php'; // Redirect to admin.php
             }
         });
