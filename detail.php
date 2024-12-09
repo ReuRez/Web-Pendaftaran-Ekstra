@@ -50,6 +50,13 @@
                 <div style="flex-grow: 1;"></div> <!-- Ruang kosong di tengah -->
                 <a href="prestasi.php" class="prestasi-button">Prestasi</a>
             </section>
+    <a href="main.php" class="home-button">Home</a>
+    <div style="flex-grow: 1;"></div> <!-- Ruang kosong di tengah -->
+    <div style="display: flex; flex-direction: column; align-items: flex-end;">
+        <a href="prestasi.php" class="prestasi-button">Prestasi</a>
+        <a href="daftar_siswa.php" class="data-siswa-button">Data Siswa</a>
+    </div>
+</section>
             <section class="image">
                 <img id="activity-image" alt="Activity Image" width="300" /> <!-- Image element to display the activity image -->
             </section>

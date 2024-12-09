@@ -113,3 +113,17 @@ section h2 {
 .home-button:hover, .prestasi-button:hover {
     background-color: #f0f0f0; /* Gaya hover untuk tombol */
 }
+
+.data-siswa-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.data-siswa-button:hover {
+    background-color: #f0f0f0; /* Gaya hover untuk tombol */
+}
